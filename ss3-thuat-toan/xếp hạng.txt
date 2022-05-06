@@ -1,0 +1,18 @@
+BEGIN
+  INPUT x là điểm số của các học viên
+        x<=100
+        IF X=>75 
+   DISPLAY "Loại A"
+   ELSE
+        IF 60<=X 
+   DISPLAY "Loại B"
+    ELSE
+         IF 45<=X 
+   DISPLAY " Loại C"
+     ELSE
+         IF 35<=X 
+    DISPLAY "Loại D"
+   ELSE
+          IF X<35
+   DISPLAY "Loại E"
+END

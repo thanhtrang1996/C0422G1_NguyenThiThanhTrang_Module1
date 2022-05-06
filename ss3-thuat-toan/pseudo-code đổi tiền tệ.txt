@@ -1,0 +1,7 @@
+BEGIN
+  INPUT s
+        vnd=s*23000
+       
+      
+   DISPLAY vnd
+END
