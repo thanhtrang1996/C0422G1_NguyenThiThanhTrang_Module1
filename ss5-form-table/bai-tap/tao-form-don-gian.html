@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tạo form đơn giản</title>
+    <style>
+        .a {
+            text-align: right;
+            color: blue;
+
+        }
+       h1 {color: #d61b06}
+
+    </style>
 </head>
 <body>
-$END$
+<form>
+    <table >
+    <tr style="text-align: center">
+        <th colspan="4"><h1>sở thích của bạn</h1></th>
+    <tr>
+        <td class="a">Họ và tên</td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td class="a" >Email</td>
+        <td><input type="email"></td>
+    </tr>
+    <tr>
+        <td rowspan="3" class="a">Sở thích</td>
+        <td> <input type="checkbox"name="hoppy">Thể thao</td>
+        <td> <input type="checkbox"name="hoppy">Âm nhạc</td>
+        <td><input type="checkbox"name="hoppy">Đọc sách</td>
+    </tr>
+        <tr>
+        <td><input type="checkbox"name="hoppy">Lướt wed</td>
+        <td><input type="checkbox"name="hoppy">Chơi game</td>
+        <td> <input type="checkbox"name="hoppy">Điện ảnh</td>
+    </tr>
+     <tr>
+         <td> <input type="checkbox"name="hoppy">Du lịch</td>
+</tr>
+<tr>
+    <td></td>
+    <td>
+    <input type="submit"value="Gửi thông tin"><input type="submit"value="Nhập lại">
+    </td>
+    </tr>
+    </table>
+    </from>
+
+
 </body>
 </html>
