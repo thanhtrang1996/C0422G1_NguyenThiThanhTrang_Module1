@@ -5,20 +5,47 @@
     <title>ung dung may tinh</title>
 </head>
 <body>
-<input type="number" id="sothunhat">
-<input type="number" id="sothuhai"><br><br>
-<button type="submit" onclick="cong()">Addition(+)</button>
-<button type="submit" onclick="tru()">Subtraction(-)</button>
-<button type="submit" onclick="nhan()">Subtraction(-)</button>
-<button type="submit"  onclick="chia()">Division(/)</button><br>
-<p id="result"></p>
+<input type="number" id="sothunhat" placeholder="nhap so thu 1">
+<input type="number" id="sothuhai" placeholder="nhap so thu 2"><br><br>
+<button type="button" onclick="cong()">Addition(+)</button>
+<button type="button" onclick="tru()">Subtraction(-)</button>
+<button type="button" onclick="nhan()">Subtraction(*)</button>
+<button type="button"  onclick="chia()">Division(/)</button><br>
+<p id="result">Result Division:</p>
 
 <script>
-function cong() {
- let a=document.getElementById(sothunhat).value
-    console.log(a)
-    
+    let a;
+    let b;
+    let result;
+    function cong() {
+  a =parseInt(document.getElementById("sothunhat").value);
+   b =parseInt( document.getElementById("sothuhai").value);
+        {result="result division:" +(a + b)}
+    document.getElementById("result").innerHTML =result
+
 }
+    function tru() {
+        a =parseInt(document.getElementById("sothunhat").value);
+        b = parseInt(document.getElementById("sothuhai").value);
+        { result=  "result division:" + (a - b)}
+        document.getElementById("result").innerHTML =result;
+
+    }
+    function nhan(){
+        a =parseInt(document.getElementById("sothunhat").value);
+        b = parseInt(document.getElementById("sothuhai").value);
+        {result=  "result division:" + (a * b)}
+        document.getElementById("result").innerHTML =result;
+
+    }
+    function chia(){
+        a =parseInt(document.getElementById("sothunhat").value);
+        b = parseInt(document.getElementById("sothuhai").value);
+        { result=  "result division:" + (a / b)}
+       result= document.getElementById("result").innerHTML=result;
+}
+
+
 </script>
 </form>
 </body>

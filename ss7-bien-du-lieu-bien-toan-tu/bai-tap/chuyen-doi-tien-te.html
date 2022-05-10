@@ -9,7 +9,7 @@
     <tr>
         <th>Amount</th>
         <th>From Currency</th>
-        <th>From Currency</th>
+        <th>To Currency</th>
     </tr>
     <tr>
         <td><input type="number" name="Amount" id="s"></td>
@@ -42,13 +42,13 @@
         let currency2 = document.getElementById("a2").value;
         let result = "";
         if (currency1 == "vnd" && currency2 == "usd") {
-            result = "Result:" + (money * 23000) + "vnd"
+            result = "Result:" + (money / 23000) + "vnd"
         }
         if (currency1 == "vnd" && currency2 == "vnd") {
             result = "Rseult:" + money + "vnd"
         }
         if (currency1 == "usd" && currency2 == "vnd") {
-            result = "Rseult:" + (money /23000)+ "usd"
+            result = "Rseult:" + (money * 23000)+ "usd"
         }
         if (currency1 == "usd" && currency2 == "usd") {
             result = "Rseult:" + money + "usd"
