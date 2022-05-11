@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chi so can nang cuar co the</title>
+</head>
+<body>
+<form>
+    <table>
+        <h2>Tính chỉ số cân nặng</h2>
+        <tr> <td id = "nhập cân nặng">Nhập cân nặng :(kg)</td>
+<td><input type="number" ></td>
+    </tr>
+        <tr>
+            <td>Nhập chiều cao :(m)</td>
+            <td id ="nhập chiều cao"><input type="number"></td>
+
+        </tr>
+        <tr>
+            <td><button onclick="kiemtra()" type="submit">Kiểm tra </button> </td>
+        </tr>
+        <tr> <td><p id="result"></p></td></tr>
+</table>
+    <script> let kiemtra1;
+            let kiemtra2;
+        function kiemtra(){
+         kiemtra1= parseFloat(document.getElementById("nhập cân nặng").value);
+         kiemtra2 = parseFloat(document.getElementById("nhập chiều cao").value);
+         bmi = kiemtra1 / (kiemtra2 * kiemtra2);
+       if(bmi < 18.5){
+       document.getElementById(result).innerHTML = "Chỉ số BMI là: " + bmi +"Bạn gầy";}
+           else if(bmi < 25){
+                document.getElementById(result).innerHTML = "Chỉ số BMI là: " + bmi +"Bạn bình thường";}
+
+           else if(bmi < 30){
+                document.getElementById(result).innerHTML = "Chỉ số BMI là: " + bmi +"Bạn béo";}
+           
+            else{if(bmi >30){
+                document.getElementById(result).innerHTML = "Chỉ số BMI là: " + bmi +"Bạn béo phì";}
+            }
+
+
+
+
+        </script>
+</form>
+</body>
+</html>
