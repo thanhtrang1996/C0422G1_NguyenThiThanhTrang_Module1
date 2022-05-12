@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may tinh don gian</title>
+</head>
+<body>
+<table>
+    <tr><td colspan="4" id ="ketqua"><input type="text" id = "text"></td></tr>
+    <tr>
+        <td ><button type="button" onclick="total(1)" >1</button></td>
+        <td ><button type="button" onclick="total(2)">2</button> </td>
+        <td ><button type="button" onclick="total(3)">3</button> </td>
+        <td ><button type="button" onclick="total(+)">+</button> </td>
+    </tr>
+    <tr>
+        <td ><button type="button" onclick="total"(4) >4</button></td>
+        <td ><button type="button" onclick="total"(5)>5</button> </td>
+        <td ><button type="button" onclick="total"(6)>6</button> </td>
+        <td ><button type="button" onclick="total"(-)>-</button> </td>
+    </tr>
+    <tr>
+        <td ><button type="button" onclick="total(7)" >7</button></td>
+        <td><button type="button" onclick="total(8)">8</button> </td>
+        <td ><button type="button" onclick="total(9)">9</button> </td>
+        <td ><button type="button"  onclick="total(x)">x</button> </td>
+    </tr>
+    <tr>
+        <td ><button type="button"  onclick="total(C) ">C</button></td>
+        <td ><button type="button"  onclick="total(0)">0</button> </td>
+        <td ><button type="button"  onclick="total(=)">=</button> </td>
+        <td ><button type="button"  onclick="total">/</button> </td>
+    </tr>
+
+</table>
+<script>
+    function total(operator) {
+        console.log(operator);
+        let ketqua = document.getElementById("ketqua").innerText;
+        switch (operator) {
+            case"0":
+            case"1":
+            case"2":
+            case"3":
+            case"4":
+            case"5":
+            case"6":
+            case"7":
+            case"8":
+            case"9":
+            case"+":
+            case"-":
+            case"X":
+            case"chia":
+                ketqua = ketqua + operator;
+                break;
+            case "C":
+                ketqua = "";
+                break;
+            case "=":
+                ketqua = eval(ketqua);
+        }
+    }
+    document.getElementById("ketqua").innerText= ketqua
+
+
+</script>
+</body>
+</html>

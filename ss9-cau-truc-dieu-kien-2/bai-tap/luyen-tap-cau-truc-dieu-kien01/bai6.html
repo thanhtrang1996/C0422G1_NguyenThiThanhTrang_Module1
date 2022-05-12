@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    let sales;
+    sales = parseFloat(prompt("nhập số hàng bán được :"));
+    if (sales >= 100000){ money =  sales * 20/100;
+    document.write("Số tiền hoa hồng bạn nhận được là:" + money+ "vnd");
+        }
+    else if(sales >=50000){money =  sales * 10/100;
+    document.write("Số tiền hoa hồng bạn nhân được là :" + money + "vnd");
+    }
+    else if (sales >=1000){money =  sales * 5/100;
+    document.write("số tiền  hoa hồng bạn nhận được là :" + money + "vnd") ;}
+    else {  money = 0;
+        document.write(  "Số tiền  hoa hồng bạn nhận được là :" + money + "vnd" +  "cần cố gắng hơn"); }
+
+
+
+</script>
+</body>
+</html>

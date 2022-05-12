@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau lenh switch - case</title>
+</head>
+
+<body>
+<form>
+    <h2>Kiểm tra số ngày trong tháng</h2>
+    <input type="number" placeholder="Nhập tháng" id="thang">
+    <button type="button" onclick="check()">check</button>
+    <br>
+    <p id="ketqua">Đây là chổ hiện ra kết quả :</p>
+</form>
+<script>
+
+
+    function check() {
+        let thang = document.getElementById("thang").value;
+
+        let month = "";
+        switch (thang) {
+            case "1":
+                month = " Tháng 1 có 31 ngày";
+                break;
+            case "2":
+                month = "Tháng 2 có 28 hoặc 29 ngày";
+                break;
+            case "3":
+                month = "Tháng 3 có 31 ngày";
+                break;
+            case "4":
+                month = "Tháng 4 có 30 ngày";
+                break;
+            case "5":
+                month = "Tháng 5 có 31 ngày";
+                break;
+            case"6" :
+                month = "Tháng 6 có 30 ngày";
+                break;
+            case "7":
+                month = "Tháng 7 có 31 ngày";
+                break;
+            case "8":
+                month = "Tháng 8 có 31 ngày";
+                break;
+            case "9":
+                month = "Tháng 9 có 30 ngày";
+                break;
+            case "10":
+                month = "Tháng 10 có 31 ngày";
+                break;
+            case "11":
+                month = "Tháng 11 có 30 ngày";
+                break;
+            case "12":
+                month = "Tháng 12 có 31 ngày";
+                break;
+            default:
+                month = "không tồn tại";
+        }
+        document.getElementById("ketqua").innerHTML = month;
+
+    }
+
+</script>
+</body>
+</html>

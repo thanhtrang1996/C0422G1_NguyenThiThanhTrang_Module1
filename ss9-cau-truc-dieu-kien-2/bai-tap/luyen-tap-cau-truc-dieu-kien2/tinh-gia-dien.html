@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh gia dien</title>
+</head>
+<body>
+<script>
+    const CHU = 1200;
+    let a;
+    let money;
+    a = parseInt(prompt("nhập số điện đã tiêu thụ"));
+    if(a>100){  money = CHU * a *  10/100 ;
+                document.write("số tiền phải trả là : " + money);}
+    else if (a>50){  money = CHU * a *  5/100 ;
+        document.write("số tiền phải trả là : " + money);}
+    else {money = CHU * a
+        document.write("số tiền phải trả là :" + money)};
+
+</script>
+</body>
+</html>
