@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 9</title>
+</head>
+<body>
+<script>
+    let a = new Array(10);
+    let b = new Array(10);
+    let c = new Array(20);
+    for (let i = 0; i < a.length; i++) {
+        a[i] = prompt("Nhập phần tử cho mảng a");
+    }
+    for (let i = 0; i < b.length; i++) {
+        b[i] = prompt("Nhập phần tử cho mảng b")
+    }
+    document.write("Mảng a là" + a + "<br>" + "Mảng b là" + b + "<br>")
+    for (let i = 0; i < 20; i++) {
+        if (i < 10) {
+            c[i] = a[i];
+        } else {
+            c[i] = b[i - 10];
+
+        }
+    }
+    document.write( "Mảng c là " +c);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    let str = "khong-co-gi-la-khong-the";
+    let arr = new Array(str);
+    for(let i = 0;i<str.length;i++){
+        arr[i] = str[i];
+    }
+    for(let i = 0;i<str.length;i++){
+        if( arr[i] == "-"){
+               arr[i] = "_" ;
+        }
+    }document.write(arr.join(""));
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+let str1 = "123abc";
+let str2 = "123abc";
+let arr1 = new Array(str1);
+let arr2 = new Array(str2);
+for(let i = 0;i<=str1.length;i++)
+{
+    if(str1.length == str2.length && arr1[i]==arr2[i]){
+        arr1 = arr2;
+    document.write(" Hai chuỗi giống nhau");
+    break;}
+else {
+    document.write(" Hai chuỗi khác nhau");
+    break;
+
+}}
+
+</script>
+</body>
+</html>
