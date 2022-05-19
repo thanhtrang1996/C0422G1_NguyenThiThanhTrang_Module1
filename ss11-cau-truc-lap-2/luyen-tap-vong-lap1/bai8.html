@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<button type="button" onclick="start()" id="a">Bắt đầu</button>
+<script>
+    function start() {
+        let min = parseInt(prompt("Nhập số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu"));
+        let max = parseInt(prompt("Nhập số bạn muốn đoán trong khoảng nhỏ nhất là bao nhiêu"));
+        let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(randomNumber)
+        for (let i = 0; i < 3; i++) {
+            let number = parseInt(prompt("Nhập số muốn đoán"));
+            if (number > randomNumber) {
+                alert("Số bạn đoán lớn hơn");
+            } else if (number < randomNumber) {
+                alert("Số bạn đoán nhỏ hơn");
+            } else {
+                alert("chúc mừng bạn đã đoán đúng");
+                break;
+            }
+        }
+        document.write("bạn đã hết lượt đoán")
+    }
+</script>
+</body>
+</html>
