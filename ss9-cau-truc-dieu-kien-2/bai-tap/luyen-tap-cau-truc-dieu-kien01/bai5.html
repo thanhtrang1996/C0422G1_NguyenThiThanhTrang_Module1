@@ -13,11 +13,17 @@
     a = parseFloat(prompt("Điểm bài kiểm tra:"));
     b = parseFloat(prompt("Điểm bài thi giữa kỳ:"));
     c = parseFloat(prompt(" Điểm bài thi cuối kỳ:"));
-    tb = (a + b + c)/3;
-    if(tb >=8){document.write("Điểm TB của bạn là:" + tb + "Chúc mừng bạn loại Giỏi");}
-    else if(tb >= 6.5){ document.write("Điểm TB của bạn là:" + tb + "Bạn đạt loại Khá");}
-    else if(tb >= 5){ document.write("Điểm TB của bạn là :" + tb + "Bạn đạt loại Trung bình");}
-    else {document.write("Điểm TB của bạn là :" + tb + "Bạn đạt loại yếu ")};
+    tb = (a + b + c) / 3;
+    if (tb >= 8) {
+        document.write("Điểm TB của bạn là:" + tb + "Chúc mừng bạn loại Giỏi");
+    } else if (tb >= 6.5) {
+        document.write("Điểm TB của bạn là:" + tb + "Bạn đạt loại Khá");
+    } else if (tb >= 5) {
+        document.write("Điểm TB của bạn là :" + tb + "Bạn đạt loại Trung bình");
+    } else {
+        document.write("Điểm TB của bạn là :" + tb + "Bạn đạt loại yếu ")
+    }
+    ;
 
 </script>
 </body>

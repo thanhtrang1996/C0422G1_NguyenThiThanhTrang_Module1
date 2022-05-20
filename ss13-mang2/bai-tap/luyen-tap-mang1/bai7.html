@@ -8,15 +8,15 @@
 <script>
     let a = parseInt(prompt("Nhập độ dài của chuỗi"));
     let b = new Array(a);
-    for(let i = 0 ; i<b.length;i++){
+    for (let i = 0; i < b.length; i++) {
         b[i] = parseInt(prompt(" Nhâp phần tử của mảng"));
     }
     let v = parseInt(prompt("Nhập v"));
-    for (let i = 0;i<b.length;i++){
-        if(v == b[i]){
-            for(let j =i;j<b.length;j++){
-                b[j] =b[j+1];
-                b[b.length -1] = 0;
+    for (let i = 0; i < b.length; i++) {
+        if (v == b[i]) {
+            for (let j = i; j < b.length; j++) {
+                b[j] = b[j + 1];
+                b[b.length - 1] = 0;
             }
         }
     }

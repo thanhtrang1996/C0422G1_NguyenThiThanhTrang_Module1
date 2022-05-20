@@ -6,22 +6,23 @@
 </head>
 <body>
 <script>
-let str1 = "123abc";
-let str2 = "123abc";
-let arr1 = new Array(str1);
-let arr2 = new Array(str2);
-for(let i = 0;i<=str1.length;i++)
-{
-    if(str1.length == str2.length && arr1[i]==arr2[i]){
-        arr1 = arr2;
-    document.write(" Hai chuỗi giống nhau");
-    break;}
-else {
-    document.write(" Hai chuỗi khác nhau");
-    break;
+    let str1 = "anh123vatoi";
+    let str2 = "anh154vatoi";
+    let result = "";
+    if (str1.length == str2.length) {
+        for (let i = 0; i < str1.length; i++) {
+            if (str1[i] == str2[i]) {
+                result = ("giống nhau")
+            } else {
+                result = "khác nhau"
+                break;
+            }
+        }
+    } else {
+        result = ("Khác nhau")
+    }
 
-}}
-
+    document.write(result)
 </script>
 </body>
 </html>

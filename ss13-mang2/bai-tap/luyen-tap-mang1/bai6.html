@@ -8,19 +8,18 @@
 <script>
     let a = parseInt(prompt("Nhập độ dài của mảng"));
     let b = new Array(a);
-    for(let i = 0;i< b.length;i++){
+    for (let i = 0; i < b.length; i++) {
         b[i] = parseInt(prompt("Nhập giá trị của mảng"))
     }
     let v = parseInt(prompt("Nhập v"));
     let result = "";
-    for(let i = 0;i < b.length; i++){
-       if (v == b[i]  ) {
-           result="V is in the array"
-           break;
-       }
-       else {
-           result="V is not in the array";
-       }
+    for (let i = 0; i < b.length; i++) {
+        if (v == b[i]) {
+            result = "V is in the array"
+            break;
+        } else {
+            result = "V is not in the array";
+        }
     }
     document.write(result)
 </script>

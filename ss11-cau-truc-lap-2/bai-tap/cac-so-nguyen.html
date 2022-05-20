@@ -9,20 +9,20 @@
     let number;
     let count = 0;
     number = parseInt(prompt("Nhập số lượng nguyên tố muốn in ra"));
-    let N = 2;
+    let n = 2;
     while (count < number) {
-        let total = 0; // đếm ước
+        let total = 0;
         for (let i = 2; i < N; i++) {
-            if(N % i === 0){
+            if (n % i === 0) {
                 total++;
                 break;
             }
         }
-        if(total === 0){
-            document.write(N + "<br>")
+        if (total === 0) {
+            document.write(n + "<br>")
             count++
         }
-        N++;
+        n++;
 
     }
 </script>

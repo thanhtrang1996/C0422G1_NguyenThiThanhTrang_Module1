@@ -8,8 +8,8 @@
 <button type="button" onclick="start()" id="a">Bắt đầu</button>
 <script>
     function start() {
-        let min = parseInt(prompt("Nhập số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu"));
-        let max = parseInt(prompt("Nhập số bạn muốn đoán trong khoảng nhỏ nhất là bao nhiêu"));
+        let min = parseInt(prompt("Nhập số bạn muốn đoán trong khoảng nhỏ nhất là bao nhiêu"));
+        let max = parseInt(prompt("Nhập số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu"));
         let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
         console.log(randomNumber)
         for (let i = 0; i < 3; i++) {

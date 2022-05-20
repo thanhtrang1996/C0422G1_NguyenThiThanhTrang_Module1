@@ -10,13 +10,16 @@
     let m;
     m = prompt("Nhập số");
     n = prompt("Nhập số")
-    for(i=1;i<=m;i++){
-        for(j =1 ;j<=n;j++){
-            if(i == 1 || i == m || j ==1 || j == n){
-                document.write("*");}
-                else {document.write("&nbsp&nbsp");}
+    for (i = 1; i <= m; i++) {
+        for (j = 1; j <= n; j++) {
+            if (i == 1 || i == m || j == 1 || j == n) {
+                document.write("*");
+            } else {
+                document.write("&nbsp&nbsp");
+            }
 
-        }document.write("<br>")
+        }
+        document.write("<br>")
     }
 </script>
 </body>

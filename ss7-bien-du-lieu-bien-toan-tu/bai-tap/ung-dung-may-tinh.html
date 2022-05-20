@@ -10,40 +10,53 @@
 <button type="button" onclick="cong()">Addition(+)</button>
 <button type="button" onclick="tru()">Subtraction(-)</button>
 <button type="button" onclick="nhan()">Subtraction(*)</button>
-<button type="button"  onclick="chia()">Division(/)</button><br>
+<button type="button" onclick="chia()">Division(/)</button>
+<br>
 <p id="result">Result Division:</p>
 
 <script>
     let a;
     let b;
     let result;
+
     function cong() {
-  a =parseInt(document.getElementById("sothunhat").value);
-   b =parseInt( document.getElementById("sothuhai").value);
-        {result="result division:" +(a + b)}
-    document.getElementById("result").innerHTML =result
+        a = parseInt(document.getElementById("sothunhat").value);
+        b = parseInt(document.getElementById("sothuhai").value);
+        {
+            result = "result division:" + (a + b)
+        }
+        document.getElementById("result").innerHTML = result
 
-}
+    }
+
     function tru() {
-        a =parseInt(document.getElementById("sothunhat").value);
+        a = parseInt(document.getElementById("sothunhat").value);
         b = parseInt(document.getElementById("sothuhai").value);
-        { result=  "result division:" + (a - b)}
-        document.getElementById("result").innerHTML =result;
+        {
+            result = "result division:" + (a - b)
+        }
+        document.getElementById("result").innerHTML = result;
 
     }
-    function nhan(){
-        a =parseInt(document.getElementById("sothunhat").value);
+
+    function nhan() {
+        a = parseInt(document.getElementById("sothunhat").value);
         b = parseInt(document.getElementById("sothuhai").value);
-        {result=  "result division:" + (a * b)}
-        document.getElementById("result").innerHTML =result;
+        {
+            result = "result division:" + (a * b)
+        }
+        document.getElementById("result").innerHTML = result;
 
     }
-    function chia(){
-        a =parseInt(document.getElementById("sothunhat").value);
+
+    function chia() {
+        a = parseInt(document.getElementById("sothunhat").value);
         b = parseInt(document.getElementById("sothuhai").value);
-        { result=  "result division:" + (a / b)}
-       result= document.getElementById("result").innerHTML=result;
-}
+        {
+            result = "result division:" + (a / b)
+        }
+        result = document.getElementById("result").innerHTML = result;
+    }
 
 
 </script>

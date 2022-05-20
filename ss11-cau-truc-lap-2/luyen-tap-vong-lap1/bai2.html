@@ -7,18 +7,20 @@
 <body>
 <script>
     let a;
-do {
-    a = parseInt(prompt("Nhập nhiệt độ"));
-    if (a > 100) {
-        alert("Giảm nhiệt độ");
-    } else if (a < 20) {
-        alert("Tăng nhiệt độ");
-    } else {
-        alert("Nhiệt độ bình thường")
+    do {
+        a = parseInt(prompt("Nhập nhiệt độ"));
+        if (a > 100) {
+            alert("Giảm nhiệt độ");
+        } else if (a < 20) {
+            alert("Tăng nhiệt độ");
+        } else {
+            alert("Nhiệt độ bình thường")
+        }
     }
-}
-while (a>100 || a<20){
-document.write(a);}
+    while (a > 100 || a < 20)
+    {
+        document.write(a);
+    }
 </script>
 </body>
 </html>

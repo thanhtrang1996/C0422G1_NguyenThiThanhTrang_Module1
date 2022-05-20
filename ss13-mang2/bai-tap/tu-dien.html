@@ -7,20 +7,21 @@
 <body>
 <h>Tìm kiếm</h>
 <input type="text" id="anh">
-<button type="button" onclick="dich()" id="a">Dịch</button><br><br>
+<button type="button" onclick="dich()" id="a">Dịch</button>
+<br><br>
 <h id="result"></h>
 <script>
-let anh = ["hi","apple","banana","money"];
-let viet = ["xinchào","táo","chuối","tiền"];
+    let anh = ["hi", "apple", "banana", "money"];
+    let viet = ["xinchào", "táo", "chuối", "tiền"];
 
-function dich() {
-    let check = document.getElementById("anh").value;
-    for( let i = 0;i<anh.length;i++){
-        if(check == anh[i]){
-            document.getElementById("result").innerText = viet[i];
+    function dich() {
+        let check = document.getElementById("anh").value;
+        for (let i = 0; i < anh.length; i++) {
+            if (check == anh[i]) {
+                document.getElementById("result").innerText = viet[i];
+            }
         }
     }
-}
 </script>
 </body>
 </html>

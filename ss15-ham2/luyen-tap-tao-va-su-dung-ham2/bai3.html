@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    function addnumber() {
+        let number = parseInt(prompt("Nhập số bạn muốn tính"));
+        let f = number;
+        for (let i = 1; i < number; i++) {
+            f = f * i;
+        }
+        document.write("Giai thừa của " + number + "là" + f)
+    }
+
+    addnumber()
+</script>
+</body>
+</html>

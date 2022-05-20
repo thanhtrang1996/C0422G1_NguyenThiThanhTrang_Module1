@@ -9,11 +9,11 @@
     let a = parseInt(prompt("Nhập số dài của mảng"));
     let b = new Array(a);
     for (let i = 0; i < b.length; i++) {
-       b[i] = parseInt(prompt("Nhập phần tử của mảng")) ;
+        b[i] = parseInt(prompt("Nhập phần tử của mảng"));
     }
-    let so1 =0;
-    let son = b.length -1;
-    while (so1 < son){
+    let so1 = 0;
+    let son = b.length - 1;
+    while (so1 < son) {
         let c = b[so1];
         b[so1] = b[son];
         b[son] = c;

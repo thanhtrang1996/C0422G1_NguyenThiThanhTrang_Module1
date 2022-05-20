@@ -6,19 +6,18 @@
 </head>
 <body>
 <script>
-    let a = parseInt(prompt("Nhập đọ dài của mảng"));
-    let arr =new Array(a);
-    for(let i = 0; i<arr.length ;i++){
-        arr[i] = parseInt(prompt("Nhập phần tử của mảng"));
-    }
-    for (let i = 0;i < arr.length;i++){
-        for (let j = 0; j <arr.length ;j++)
-        if(arr[i]>arr[j]){
-            let c = arr[i];
-            arr[i] = arr[j];
-            arr[j] =c;
+    let a = parseInt(prompt("Nhập số bạn muốn"));
+    let sum = 0;
+    for(let i = 1;i<a;i++){
+        if(a%i == 0){
+            sum = sum +i;
         }
-    }document.write(arr);
+    }
+    if(sum== a){
+        document.write("hai số giống nhau");
+    }
+    else{document.write("hai số khác nhau")}
+
 </script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let a = ["Polaris", "Aldebaran", "Deneb", "Vage", "Altair", "Dubhe", "Regulus"];
+    let b = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let result;
+
+    function seeName() {
+
+        let check = prompt("Nhập tên sao");
+
+        for (let i = 0; i < a.length; i++) {
+            if (check == a[i]) {
+                document.write(b[i]);
+            } else {
+                document.write("Không tìm thấy sao");
+                break;
+            }
+        }
+    }
+
+    seeName();
+</script>
+</body>
+</html>
