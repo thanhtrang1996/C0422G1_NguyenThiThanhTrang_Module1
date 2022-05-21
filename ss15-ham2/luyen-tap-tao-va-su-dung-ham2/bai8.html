@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<script>
+    function addnumber() {
+        let arr = [2, 5, 8, 6, 9, 12];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i; j < arr.length; j++) {
+                let c = arr[i];
+                arr[i] = arr[j];
+                arr[j] = c;
+            }
+        }
+        document.write(arr);
+
+    }
+
+    addnumber()
+</script>
+</body>
+</html>
