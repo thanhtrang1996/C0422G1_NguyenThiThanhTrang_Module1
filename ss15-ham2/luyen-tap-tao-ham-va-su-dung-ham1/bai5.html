@@ -8,23 +8,25 @@
 <script>
     let a = ["Polaris", "Aldebaran", "Deneb", "Vage", "Altair", "Dubhe", "Regulus"];
     let b = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
-    let result;
+    let result
 
     function seeName() {
 
         let check = prompt("Nhập tên sao");
+        let count =0
 
         for (let i = 0; i < a.length; i++) {
             if (check == a[i]) {
-                document.write(b[i]);
-            } else {
-                document.write("Không tìm thấy sao");
-                break;
+                count++;
+                let c = b[i];
+                document.write("Ngôi sao " + check + "là"+ c)
+                break
             }
+        }if(count == 0){
+            document.write("không tim thấy");
         }
     }
-
-    seeName();
+     seeName();
 </script>
 </body>
 </html>

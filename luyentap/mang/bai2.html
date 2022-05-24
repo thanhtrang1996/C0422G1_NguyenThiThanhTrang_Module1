@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let a =  [1,6,3,8,45,9,6,8];
+    let b = [1 ,4,45,2,11,13,31,12,5,53,3];
+    let ab = [];
+    let c = 0;
+    let count = 0
+    for( let i = 0;i < b.length;i++){
+        count = 0
+        for(let j = 0; j < a.length;j++) {
+            if (a[j] == b[i]) {
+                count++
+                break;
+            }
+        }if (count == 0){
+            ab[i] = b[i];
+            document.write(ab[i] + "<br>")
+        }
+    }
+</script>
+</body>
+</html>

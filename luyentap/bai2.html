@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let n = prompt(" Nhập số");
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+            if (i == j || i == 1 || j == 1 ||  i == n) {
+                document.write("*");
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write("<br>")
+    }
+</script>
+</body>
+</html>
