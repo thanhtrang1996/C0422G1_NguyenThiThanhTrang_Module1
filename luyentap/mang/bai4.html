@@ -8,6 +8,19 @@
 <script>
     let a = [1,2,3,4,5,6,7,8,9,10];
     let b = ["một","hai","ba","bốn","năm","sáu","bảy","tám","chín","mười"];
+    let count = 0;
+    function addNumber() {
+        let check = parseInt(prompt("Nhập số "))
+        for (let i = 0; i <a.length ; i++) {
+            if( check == a[i]){
+                count++;
+                let c = b[i];
+                document.write(c )
+            }
+                }if(count == 0){
+            document.write("Không tồn tại")
+        }
+    }addNumber();
 
 </script>
 </body>

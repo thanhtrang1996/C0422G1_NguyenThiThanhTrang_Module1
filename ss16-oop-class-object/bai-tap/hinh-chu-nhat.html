@@ -5,6 +5,8 @@
     <title>hinh chu nhat</title>
 </head>
 <body>
+<canvas id="a" height="500px" width="500px" style="border: 1px solid red">
+</canvas>
 <script>
     class Rectangle {
         constructor(length, width) {
@@ -24,6 +26,10 @@
         getPerimeter(){
             return 2*(this.length + this.width)
         }
+        drawRectangle(){
+            let rectangle = document.getElementById('a').getContext("2d");
+            rectangle.fillRect(100,100,this.length,this.width)
+        }
     }
 
 let length = parseInt(prompt("Nhập chiều dài của hình chủ nhật"));
@@ -33,6 +39,7 @@ let length = parseInt(prompt("Nhập chiều dài của hình chủ nhật"));
     let perimeter = rectangle.getPerimeter();
     document.write("Diện tích hình chữ nhật là" +rectangle.getArea() + "<br>" );
     document.write("Chu vi hình chữ nhật là " + rectangle.getPerimeter());
+    rectangle.drawRectangle()
 </script>
 </body>
 </html>

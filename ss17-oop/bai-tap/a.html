@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor(weight) {
+            this.weight = weight;
+        }
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(value) {
+            this.weight = value;
+        }getDecrease(){
+            return this.setWeight(this.weight-1);
+        }
+    }
+    let apple=new Apple(10);
+    document.write("Khối lượng của quả táo lá:"+apple.getWeight()+"<br>");
+    class Human{
+        constructor(name,gender,weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(value) {
+            this.name = value;
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        setGender(value) {
+            this.gender = value;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(value) {
+            this.weight = value;
+        }
+        getEat(apple){
+            if (apple.getWeight()>0) {
+                this.weight++;
+                apple.weight--;
+            }else {
+                document.write("Táo đã hết");
+            }
+
+        }
+
+        getCheck(apple){
+            return apple>0
+        }
+        getSay(speak){
+            document.write(speak)
+        }
+    }
+    let adam=new Human("Adam","Male",60);
+    let eva=new Human("Eva","Female",50)
+    document.write(adam.getName()+" "+"số cân nặng là"+adam.getWeight()+"<br>");
+    document.write(eva.getName()+" "+"số cân nặng là"+eva.getWeight()+"<br>");
+    document.write("Từ thời xa xưa có câu chuyện ăn táo của adam và eva :)))"+"<br>")
+    for (i=0;i<6;i++){
+        adam.getSay("Adam said :Em ăn táo không"+"<br>");
+        eva.getSay("Em ăn anh nhé S2"+"<br>");
+        eva.getEat(apple);
+        document.write("Eva tăng lên"+eva.getWeight()+"kg"+"<br>");
+        eva.getSay("Eva said : Ăn táo không anh yêu"+"<br>");
+        adam.getSay("Adam said : Anh ăn em nhé S2"+"<br>");
+        adam.getEat(apple)
+        document.write("Adam tăng lên"+adam.getWeight()+"kg"+"<br>");
+
+    }
+</script>
+</body>
+</html>

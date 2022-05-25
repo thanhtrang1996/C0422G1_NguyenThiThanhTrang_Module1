@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cong tac</title>
+</head>
+<body>
+<script>
+    class ElectricLamp{
+        constructor(status) {
+            this.status = status;
+        }
+getStatus(){
+            return this.status;
+}
+    }
+    class SwitchButton {
+        constructor(status,lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+        setStatus (value){
+            this.status = value;
+        }
+        setLamp(value){
+            this.lamp = value;
+        }
+        getStatus(){
+            return this.status;
+        }
+        getLamp() {
+            return this.lamp;
+        }connectToLamp(ElectricLamp){
+            return this.lamp = ElectricLamp;
+        }
+        switchOff(){
+            this.lamp.status = false;
+            return this.status = false;
+        } switchOn(){
+            this.lamp.status = true;
+            return this.status =true;
+        }
+    }
+    let electricLamp = new ElectricLamp(false);
+    let switchButton = new SwitchButton(electricLamp,false)
+    document.write(switchButton.switchOn());
+    document.write(electricLamp.getStatus());
+    document.write(switchButton.switchOff());
+    document.write(electricLamp.getStatus());
+</script>
+</body>
+</html>
