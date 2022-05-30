@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let array2d = [];
+    let arr = [];
+    let max = 0 ;
+    let min  = 100;
+
+    let m = parseInt(prompt("Nhập kích thước của mảng m"));
+    let n = parseInt(prompt(" Nhập kích thước của mảng n"));
+    for (let i = 0; i < m; i++) {
+        arr = [];
+        for (let j = 0; j < n; j++) {
+            arr[j] = parseInt(prompt("arr" + "[" + i + "][" + j + "] "));
+
+        }   array2d[i] = arr;}
+
+    function check(array) {
+        function maxMin(number) {
+            if (number > max) {
+                max = number;
+            }
+            if (number < min) {
+                min = number
+            }
+        }
+
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (maxMin(array[i][j])) {
+                    arr.push(array[i][j])
+                }
+            }
+        }document.write( "Số lớn nhất là :" + max  + "<br>");
+        document.write("Số nhỏ nhất là : " + min );
+    }
+
+    document.write("array2d : [ [" + array2d.join("],[") + "] ]" + "<br>");
+    check(array2d)
+
+
+
+</script>
+</body>
+</html>

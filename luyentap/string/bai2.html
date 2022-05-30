@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập vào");
+    let arr = [];
+    arr = a.split("");
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = arr.length-1; j >i; j--) {
+            if(arr[i] == arr[j]){
+                 arr.splice(j,1)
+            }
+        }if(arr[i] == " "){
+            arr.splice(i,1)
+        }
+    }
+    document.write('số ký tự khác nhau là :' + arr.length +'<br>' + arr)
+</script>
+</body>
+</html>

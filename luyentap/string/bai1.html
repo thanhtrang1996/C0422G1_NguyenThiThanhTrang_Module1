@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập ");
+    a = a.trim().toLowerCase();
+    let arr = []
+    arr = a.split("");
+    for(let i = arr.length -1;i >= 0;i--){
+        if(arr[i] == " " && arr[i - 1] == " "){
+            arr.splice(i,1);
+        }
+        if((arr[i] != " " && arr[i - 1] == " ") || i == 0 ){
+          arr[i] = arr[i].toLocaleUpperCase()
+        }
+    }
+    document.write(arr.join("")+ "<br>")
+   arr = arr.join("")
+    arr = arr.split(" ")
+    let max =arr[0]
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i].length > max.length){
+            max = arr[i]
+        }
+    }
+    document.write("Phần tử dài nhất trong mảng là : " + max)
+
+</script>
+</body>
+</html>

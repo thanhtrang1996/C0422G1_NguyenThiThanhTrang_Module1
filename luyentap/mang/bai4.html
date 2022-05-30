@@ -6,21 +6,18 @@
 </head>
 <body>
 <script>
-    let a = [1,2,3,4,5,6,7,8,9,10];
-    let b = ["một","hai","ba","bốn","năm","sáu","bảy","tám","chín","mười"];
-    let count = 0;
-    function addNumber() {
-        let check = parseInt(prompt("Nhập số "))
-        for (let i = 0; i <a.length ; i++) {
-            if( check == a[i]){
-                count++;
-                let c = b[i];
-                document.write(c )
+    let a = [0,1,2,3,4,5,6,7,8,9];
+    let b = ["không","một","hai","ba","bốn","năm","sáu","bảy","tám","chín"];
+    let c = [];
+        let check = prompt("Nhập số ")
+        for (let i = 0; i < check.length; i++) {
+            for(let j =0;j<a.length;j++){
+                if (check[i]== a[j]){
+                    c.push(b[j])
+                }
             }
-                }if(count == 0){
-            document.write("Không tồn tại")
         }
-    }addNumber();
+document.write(c.join(' '))
 
 </script>
 </body>

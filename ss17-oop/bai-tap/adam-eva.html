@@ -9,15 +9,14 @@
     class Apple{
         constructor(weight) {
             this.weight = weight;
-        }setWeight(){
-            return this.weight
+        }setWeight(weight){
+          this.weight = weight
         }
         getWeight(){
             return this.weight;
         }
-        decrease(){
-
-           this.weight--;
+        decrease(){if(this.weight>0){
+           this.weight--;}
         }
         isEmpty(){
            if (this.weight <=0){
@@ -70,7 +69,14 @@
     let eva = new Human("Eva","Female" ,45);
     let adam = new Human("Adam","Male",65);
     document.write(eva.getName() + "có cân nặng là" + eva.getWeight() + "<br>");
-    document.write(adam.getName() + "có cân nặng là" + adam.getWeight() + "<br>");
+    document.write(adam.getName() + "có cân nặng là" + adam.getWeight() + "<br>")
+        while (apple.getWeight() > 0){
+        eva.eat(apple);
+        document.write("Cân nặng của Eva là" + eva.getWeight()+ "<br>");
+        adam.eat(apple);
+        document.write("Cân nặng của Adam sau khi ăn táo là" + adam.getWeight()+ "<br>")
+    }
+
 </script>
 </body>
 </html>

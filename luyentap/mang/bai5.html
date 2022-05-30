@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>Menu</h1>
+
+<button type="button" onclick="chonMon()">Chọn món</button>
+<br>
+<script>
+    let water = ['Cafe', 'Cam vắt', 'Nước ép cà rốt', 'Nước ép cà chua', 'Nước lọc', 'Nước dừa'];
+    let money = ['15000', '25000', '10000', '15000', '8000', '20000']
+    for (let i = 0; i < water.length; i++) {
+        document.write((i + 1) + ":" + water[i] + " <br>")
+    }
+
+    function chonMon() {
+        let number = 0
+        let total = 0
+        do {
+            number = parseInt(prompt("Nhập loại nước uống bạn muốn uống"));
+            for (let i = 0; i < money.length; i++) {
+                if (number == i + 1) {
+                    alert("Số tiền của nước uống là :" + money[i])
+                    let amount = parseInt(prompt("Nhập số lượng "));
+                    total = amount * money[i];
+                }
+            }
+
+            if (number == 7) {
+                alert("Tổng số tiền bạn phải trả là" + total + "\n" + " Chúc bạn ngon miệng" + "\n" + " Cám ơn bạn đã ủng hộ quán");
+                break;
+            }
+        } while (number <= 7)
+    }
+</script>
+
+</body>
+</html>

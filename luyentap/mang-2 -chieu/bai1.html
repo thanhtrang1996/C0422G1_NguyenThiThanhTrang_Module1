@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let array2d = [];
+    let arr = [];
+    let sum = 0;
+    let m = parseInt(prompt("nhập khích thước mảng m*n có m = "));
+    let n = parseInt(prompt("nhập khích thước mảng m*n có n = "));
+    for (let i = 0; i <m ; i++) {
+        arr = [];
+        for (let j =0;j<n;j++){
+            arr[j] = parseInt(prompt("arr"+"[" + i+ "]["+j+"]"))
+            if (    arr[j]%2 == 0){
+                sum += arr[j];
+            }
+        }
+        array2d[i] =arr
+    }
+    document.write("array2d = [ [" + array2d.join("], [") + "] ]" +"<br>"+ "Tổng các phần tử chẵn trong mảng là : " + sum)
+</script>
+</body>
+</html>

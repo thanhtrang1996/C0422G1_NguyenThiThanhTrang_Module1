@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let array2d = [];
+    let arr = [];
+    let arr2 = [];
+
+    let m = parseInt(prompt("Nhâp kích thước của mảng m ="));
+    let n = parseInt(prompt("Nhập kích thươc của mảng n ="));
+    for (let i = 0; i < m; i++) {
+        arr = [];
+        for (let j = 0; j < n; j++) {
+            arr[j] = parseInt(prompt("arr" + "[" + i + "][" + j + "]"));
+        }
+        array2d[i] = arr;
+    }
+
+    function check(arr) {
+        function checkNumber(number) {
+            let dem = 0;
+            if (number < 2) {
+                return false
+            } else if (number == 2) {
+                return true
+            }
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    dem++;
+                    break;
+                    return false
+
+                }
+
+            }
+            if (dem === 0) {
+                return true
+            }
+        }
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (checkNumber(arr[i][j])) {
+                    arr2.push(arr[i][j]);
+                }
+
+            }
+        }
+        document.write("Các phần tử trong mảng là số nguyên tố là" +arr2 + "<br>" + "Tổng nguyên tố là" + arr2.length)
+    }
+
+    document.write("array2d : =[ [" + array2d.join("],[") + "] ]" + "<br>");
+    check(array2d)
+
+
+</script>
+</body>
+</html>

@@ -6,46 +6,58 @@
 </head>
 <body>
 <script>
-    class ElectricLamp{
+    class ElectricLamp {
         constructor(status) {
             this.status = status;
         }
-getStatus(){
+
+        getStatus() {
             return this.status;
-}
+        }
     }
+
     class SwitchButton {
-        constructor(status,lamp) {
+        constructor(status, lamp) {
             this.status = status;
             this.lamp = lamp;
         }
-        setStatus (value){
+
+        setStatus(value) {
             this.status = value;
         }
-        setLamp(value){
+
+        setLamp(value) {
             this.lamp = value;
         }
-        getStatus(){
+
+        getStatus() {
             return this.status;
         }
+
         getLamp() {
             return this.lamp;
-        }connectToLamp(ElectricLamp){
-            return this.lamp = ElectricLamp;
         }
-        switchOff(){
+
+        connectToLamp(electricLamp) {
+            return this.lamp = electricLamp;
+        }
+
+        switchOff() {
             this.lamp.status = false;
             return this.status = false;
-        } switchOn(){
+        }
+
+        switchOn() {
             this.lamp.status = true;
-            return this.status =true;
+            return this.status = true;
         }
     }
+
     let electricLamp = new ElectricLamp(false);
-    let switchButton = new SwitchButton(electricLamp,false)
-    document.write(switchButton.switchOn());
-    document.write(electricLamp.getStatus());
-    document.write(switchButton.switchOff());
+    let switchButton = new SwitchButton(false,electricLamp)
+    document.write(switchButton.switchOn() + "<br>");
+    document.write(electricLamp.getStatus()+ "<br>");
+    document.write(switchButton.switchOff()+ "<br>");
     document.write(electricLamp.getStatus());
 </script>
 </body>
