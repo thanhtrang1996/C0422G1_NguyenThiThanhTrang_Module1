@@ -8,12 +8,12 @@
 <script>
     let money = parseInt(prompt("Nhập số tiền lương bạn nhận được"));
     let money1 = 0;
-    if(money > 15000000){
+    if(money >= 15000000){
        money1 = money *20/100;
        document.write("Số tiền bạn  phải đóng thuế là" + money1 + "<br>");
        document.write("Số tiền lương bạn thực lĩnh là" + (money - money1));
     }
-    else if ( money >7000000){
+    else if ( money >= 7000000){
         money1 = money * 10/100;
         document.write("Số tiền bạn  phải đóng thuế là" + money1 + "<br>");
     document.write("Số tiền lương thực lĩnh là"  + (money - money1));}

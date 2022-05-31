@@ -6,11 +6,15 @@
 </head>
 <body>
 <script>
-    let a = [1, 5, 9, 3, 8, 12, 23, 6, 11, 10];
-    document.write(a.length + "<br>")
-    for (let value of a) {
+    let a = parseInt(prompt("Nhập độ dài của mảng"));
+    let arr = newAray(a);
+    for (let i = 0; i < a.length; i++) {
+        arr[i] = parseInt(prompt("Nhập phần tử của mảng"))
+    }
+    document.write(arr.length + "<br>")
+    for (let value of arr) {
         if (value >= 10) {
-            document.write("các số lớn hơn hoặc bằng 10 là" + value + "<br>");
+            document.write("các số lớn hơn hoặc bằng 10 có trong mảng  là :" + value + "<br>");
 
         }
     }

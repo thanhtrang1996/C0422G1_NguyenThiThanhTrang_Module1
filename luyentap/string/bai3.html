@@ -6,23 +6,22 @@
 </head>
 <body>
 <script>
-    let s1 = "aabcc";
-    let s2 = "adcaa";
-    arr1 = s1.split("");
-    arr2 = s2.split("")
-
+    let str1 = prompt("Nhập chuổi str1");
+    let str2 = prompt("Nhập chuổi str2");
+    arr1 = str1.split("");
+    arr2 = str2.split("");
     let count = 0;
-    for (let i = 0; i < arr1.length; i++) {
-        for (let j = 0 ; j < arr2.length; j++) {
+    for (let i = arr1.length - 1; i >= 0; i--) {
+        for (let j = arr2.length - 1; j >= 0; j--) {
             if (arr1[i] == arr2[j]) {
                 count++;
-
                 arr1.splice(i, 1);
-                console.log(arr2)
+                arr2.splice(j, 1);
             }
         }
     }
-    document.write(count)
+    document.write("chuổi s1 = '" + str1 + "'<br>" + "chuổi s2 ='" + str2 + "'<br>")
+    document.write( "Số phần tử giống nhau trong 2 chuổi là :" + count)
 </script>
 </body>
 </html>

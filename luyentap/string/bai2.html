@@ -6,19 +6,20 @@
 </head>
 <body>
 <script>
-    let a = prompt("Nhập vào");
-    let arr = [];
-    arr = a.split("");
+    let str = prompt("Bạn muốn nhập gì thì cứ nhập");
+    let arr = str.split("");
     for (let i = 0; i < arr.length; i++) {
-        for (let j = arr.length-1; j >i; j--) {
-            if(arr[i] == arr[j]){
-                 arr.splice(j,1)
+        for (let j = arr.length - 1; j >i; j--) {
+            if (arr[i] == arr[j]) {
+                arr.splice(j, 1)
             }
-        }if(arr[i] == " "){
-            arr.splice(i,1)
+        } if (arr[i] == " ") {
+            arr.splice(i, 1)
         }
+
     }
-    document.write('số ký tự khác nhau là :' + arr.length +'<br>' + arr)
+    document.write("chuổi bạn đã nhập là : " + str + "<br>")
+    document.write('số ký tự khác nhau là :' + arr.length + '<br>' + arr)
 </script>
 </body>
 </html>

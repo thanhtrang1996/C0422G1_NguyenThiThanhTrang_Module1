@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dien thoại</title>
+</head>
+<body>
+<div id="hienThi"></div>
+<br>
+<button type="button" onclick="themSanPham()">Thêm sản phẩm</button>
+
+<script>
+    class DienThoai1 {
+        constructor(ten, mau, gia, hang) {
+            this.ten = ten;
+            this.mau = mau;
+            this.gia = gia;
+            this.hang = hang;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        setTen(value) {
+            this.ten = value;
+        }
+
+        getMau() {
+            return this.mau;
+        }
+
+        setMau(value) {
+            this.mau = value;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        setGia(value) {
+            this.gia = value;
+        }
+
+        getHang() {
+            return this.hang;
+        }
+
+        setHang(value) {
+            this.hang = value;
+        }
+    }
+
+    let nokia = new DienThoai1("Nokia", "Đen", "500", "nokia");
+    let iPhone = new DienThoai1("iPhone", "Vàng", "9000", "iPhone");
+    let arr = [nokia, iPhone]
+
+    function hienThi() {
+        let table = "<table border='1px' cellspacing='0px' cellpadding='10px' style='color: red'>\n" +
+            "    <tr>\n" +
+            "        <th>Tên</th>\n" +
+            "        <th>Màu</th>\n" +
+            "        <th>Giá</th>\n" +
+            "        <th>Hãng</th>\n" +
+            "        <th>Cập nhật</th>\n" +
+            "        <th>Xoá</th>\n" +
+            "    </tr>"
+        for (let i = 0; i < arr.length; i++) {
+            table += "<tr>\n" +
+                "    <td> " + arr[i].getTen() + " </td>\n" +
+                "    <td> " + arr[i].getMau() + "</td>\n" +
+                "    <td>" + arr[i].getGia() + "</td>\n" +
+                "    <td> " + arr[i].getHang() + "</td>\n" +
+                "    <td> " +
+                "<button type='button' onclick='capNhat(" + i + " )'>Cập nhật</button> "+
+            " </td>\n" +
+            "<td>" +
+            "<button type='button' onclick='xoa(" + i + " )'>Xoá</button> " +
+            " </td>\n" +
+            "</tr>"
+        }
+        table += "</table>";
+        document.getElementById("hienThi").innerHTML = table;
+    }
+
+    hienThi();
+
+    function themSanPham() {
+        let ten = prompt("Nhập tên sản phẩm");
+        let mau = prompt("Nhập màu sản phẩm");
+        let gia = prompt("Nhập giá sản phẩm");
+        let hang = prompt("Nhập hãng sản xuất của sản phẩm");
+        let dienThoaiMoi = new DienThoai1(ten, mau, gia, hang);
+        arr.push(dienThoaiMoi)
+        hienThi()
+    }
+    function capNhat(moi) {
+        let ten = prompt("Nhập tên sản phẩm");
+        let mau = prompt("Nhập màu sản phẩm");
+        let gia = prompt("Nhập giá sản phẩm");
+        let hang = prompt("Nhập hãng sản xuất của sản phẩm");
+        arr[moi].setTen(ten);
+        arr[moi].setMau(mau);
+        arr[moi].setGia(gia);
+        arr[moi].setHang(hang);
+        hienThi()
+    }
+    function xoa(i) {
+
+        if (confirm("Bạn có muốn xoá không")){
+            arr.splice(i,1);
+            hienThi()
+        }
+
+    }
+</script>
+</body>
+</html>
